@@ -1,7 +1,4 @@
-/**
- * Created by deepspace on 17-7-20.
- */
-// 学生对象
+// xueshen object
 class Student{
     constructor(name,studentId,national,math,chinese,english,programing){
         this.name=name;
@@ -13,12 +10,13 @@ class Student{
         this.programing=programing;
     }
 }
-//计算个人总分数
+
+// ge ren zhong feng
 function getSubtotal(studentObj) {
     return parseFloat(studentObj.math)+parseFloat(studentObj.chinese)+parseFloat(studentObj.english)+parseFloat(studentObj.programing);
 }
-//计算总分和平均分并返回DOM中需要的格式---tr td
-//返回查询插入DOM格式
+
+//计算总分和平均分
 function creatList(student) {
     student.subTotal = getSubtotal(student);
     student.subAverage = parseFloat(student.subTotal/4);
@@ -32,6 +30,7 @@ function creatList(student) {
         <td>${student.subAverage}</td>
     </tr>`;
 }
+
 //从数组中获取中位数
 function getMedian(collection) {
     let orderCollection =  collection.sort(function (a,b) {
@@ -47,11 +46,10 @@ function getMedian(collection) {
     return median;
 }
 
-
 // 添加学生
 $('#enter').click(function () {
-    let name = $('#name').val(),
-        studentId = $('#studentId').val(),
+    let name =$('#name').val(),
+        studentId1 = $('#studentId').val(),
         national = $('#national').val(),
         math = $('#math').val(),
         chinese = $('#chinese').val(),
@@ -59,39 +57,38 @@ $('#enter').click(function () {
         programing = $('#programing').val();
     let flag = false ;
     $.get('/allStudentInfo',function (ans) {
-        let stuData=ans;
-        for(let i=0;i<stuData.length;i++){
-            if(stuData[i].studentId===studentId){
-                flag=true;
+        let stu = ans;
+        if(stu){
+            for(let i=0;i<stu.length;i++){
+                if(stu[i].studentId==studentId1){
+                    flag=true;
+                }
             }
         }
         if(!flag){
             let newStu = new Student(name,studentId,national,math,chinese,english,programing);
             $.post('/student',newStu);
-            layer.msg('录入成功', { icon: 6 });
-        } else {
+            layer.msg('录入成功',{icon:6});
+        }else {
             layer.msg('该学生已录入,请前往查询页面查询该生成绩!', { icon: 5 });
         }
     });
 });
 
-
 //查询学生
 $('#search').click(function (e) {
-    e.preventDefault();
-    $('#tbody').html('');
+   e.preventDefault();
+   $('#tbody').html('');
     let count = 0;
     let subTotal = 0;
     let subTotalArr = [];//存放每个同学总分的数组
     let allTotal = 0;
     $.get('/allStudentInfo',function (ans) {
         let students = ans;
-        // console.log(students);
         let stuIds = $('#input_studentIds').val().split(',');
-        // console.log(stuIds);
         let flag = false;
-        for (let i = 0; i < students.length; i++) {
-            if (stuIds.indexOf(students[i].studentId) >= 0) {
+        for(let i = 0; i < students.length; i++){
+            if(stuIds.indexOf(students[i].studentId) >= 0){
                 subTotalArr.push(getSubtotal(students[i]));
                 $('#tbody').append(creatList(students[i]));
                 flag = true;
@@ -115,14 +112,14 @@ $('#search').click(function (e) {
         }
     });
 });
+
 //修改学生
-$(document).on('click', '#modify', function(e) {
+$('#modify').click(function (e) {
     e.preventDefault();
-    $.get('/allStudentInfo', function(ans) {
+    $.get('/allStudentInfo',function (ans) {
         let students = ans;
         let str;
         let flag = false;
-
         let stuIds = $('#modify_input').val().split(',');
         for (let i = 0; i < students.length; i++) {
             if (stuIds.indexOf(students[i].studentId) >= 0) {
@@ -152,30 +149,5 @@ $(document).on('click', '#modify', function(e) {
             layer.msg('不存在此学号的学生 !!!', { icon: 5 })
         }
     });
-
 });
 
-$(document).click(function(e) { // 在页面任意位置点击而触发此事件
-    e.preventDefault();
-    if (/delete/.test($(e.target).attr("id"))) {
-        e.target.parentNode.parentNode.remove();
-        $.post('/allStudentInfo/id', { id: $(e.target).attr("id").match(/\d+/g)[0] },function (ans) {
-            layer.msg('删除学生信息成功 !!!', { icon: 1 })
-        });
-    }
-    if (/modify/.test($(e.target).attr("id"))) {
-        let info = e.target.parentNode;
-        let name = info.cells[1].firstChild.value;
-        let national = info.cells[2].firstChild.value;
-        let studentId = info.cells[3].firstChild.value;
-        let math = info.cells[4].firstChild.value;
-        let chinese = info.cells[5].firstChild.value;
-        let english = info.cells[6].firstChild.value;
-        let programing = info.cells[7].firstChild.value;
-        //实例化
-        let student = new Student(name,national,studentId,math, chinese, english, programing);
-        $.post('/allStudentInfo/id', student, function(ans) {
-            layer.msg('修改学生信息成功 !!!', { icon: 1 })
-        });
-    }
-});
