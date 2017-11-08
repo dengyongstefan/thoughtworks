@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="JS/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="layer-v3.1.0/layer/layer.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand logo">学生成绩管理系统</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"> 登录</a></li>
+                <li><a href="#"> 退出<span href="" class="glyphicon glyphicon-log-out out"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="mainbody">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 left">
+                <div class="info">
+                    <div class="info-headpic"></div>
+                    <p>ID : 我是班主任</p>
+                </div>
+                <div class="operate">
+                    <ul  id="myTab">
+                        <li class="active"><a href="#enterGrades" data-toggle="tab">录入学生成绩 <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        <li><a href="#searchGrades" data-toggle="tab">查询学生成绩 <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        <li><a href="#modifyGrades" data-toggle="tab">修改学生成绩 <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7 right">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="enterGrades">
+                        <form id="get_data" method="post" class="form-horizontal" style="padding: 20px" role="form">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="name">姓名</label>
+                                        <input id="name" type="text" name="name" class="form-control"  required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="studentId">学号</label>
+                                        <input id="studentId" type="number" name="studentId" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="national">民族</label>
+                                        <input id="national" type="text" name="national" class="form-control" required>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="math">数学</label>
+                                        <input id="math" type="number" name="math" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="chinese">语文</label>
+                                        <input id="chinese" type="number" name="chinese" class="form-control"  required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="english">英语</label>
+                                        <input id="english" type="number" name="english" class="form-control"  required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="programing">编程</label>
+                                        <input id="programing" type="number" name="programing" class="form-control"  required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-10 col-sm-2">
+                                    <button id="enter" type="button" class="btn btn-primary">确定</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="searchGrades">
+                        <form class="form-horizontal" style="padding: 20px" role="form">
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <div class="input-group">
+                                        <label class="input-group-addon" for="input_studentIds">学号</label>
+                                        <input id="input_studentIds" type="text" name="studentIds" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-offset-2 col-sm-3">
+                                    <div class="input-group pull-right">
+                                        <button id="search" type="submit" class="btn btn-primary">查询</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <table id="gradeList" class="table table-hover table-bordered table-condensed table-striped">
+                            <caption class="caption">学生成绩表</caption>
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>数学</th>
+                                <th>语文</th>
+                                <th>英语</th>
+                                <th>编程</th>
+                                <th>总分</th>
+                                <th>平均分</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            <!--查询后添加在此处-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="modifyGrades">
+                        <table id="modifyInfo" class="table table-hover table-bordered table-condensed table-striped">
+                            <caption class="caption">修改学生成绩表</caption>
+                            <form class="form-horizontal" style="padding: 20px" role="form">
+                                <div class="form-group">
+                                    <div class="col-sm-7">
+                                        <div class="input-group">
+                                            <label class="input-group-addon" for="modify_input">学号</label>
+                                            <input id="modify_input" type="text" name="studentIds" class="form-control" placeholder="请输入需要修改学生成绩的学号">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-offset-2 col-sm-3">
+                                        <div class="input-group pull-right">
+                                            <button id="modify" type="submit" class="btn btn-primary">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>民族</th>
+                                <th>学号</th>
+                                <th>数学</th>
+                                <th>语文</th>
+                                <th>英语</th>
+                                <th>编程</th>
+                                <th colspan="2">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="modifyList">
+                            <!--查询后添加在此处-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
