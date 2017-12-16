@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coding Girls Club</title>
+	<meta name="description" content="Coding Girls Club" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <link rel="stylesheet" href="../library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../library/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="../CSS/magnific-popup.css">
+    <link rel="stylesheet" href="../CSS/calendar.css">
+	<link href="../CSS/index.css" rel="stylesheet">
+	<link href="../CSS/animate.min.css" rel="stylesheet">
+	<link href="../CSS/owl.carousel.css" rel="stylesheet">
+	<link href="../CSS/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="../library/jQueryPagination/css/jquery.pagination.css">
+</head>
+<body class="header-fixed-top"> <!--header-fixed-top：悬浮导航栏home样式 -->
+
+<!--顶端log和字: News,Blog-->
+<section id="top-contact" class="top-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 pull-left">
+                <ul class="contact-list">
+                    <li class="contact-list-news">
+                        <a class="News" href="#">
+                            <span class="top-icon">
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i><!--引用图标-->
+                            </span>
+                            <a href="#">News</a>
+                        </a>
+                    </li>
+                    <li class="contact-list-blog">
+                        <a class="Blog" href="blog-single">
+  									<span class="top-icon">
+                                        <i class="fa fa-book" aria-hidden="true"></i>
+                                    </span>
+                            <a href="blog-single">Blog</a>
+
+                        </a>
+                    </li>
+                </ul> <!--News,Blog-->
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /#top-contact -->
+
+<!--顶端CodingGrilsClub图标-->
+<section id="site-banner" class="site-banner text-center">
+    <div class="container">
+        <div class="site-logo">
+           <img src="../Images/logo.jpg" >
+        </div><!-- /.site-logo -->
+    </div><!-- /.container -->
+</section><!-- /#site-banner -->
+
+<!--导航栏样式-->
+<header id="main-menu" class="main-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                        <i class="fa fa-bars"></i>
+                    </button> <!--下拉菜单-->
+                </div>
+                <nav id="menu" class="menu collapse navbar-collapse">
+                    <ul id="headernavigation" class="menu-list nav navbar-nav">
+                        <li class="active"><a href="#bootstrap">Home</a></li>
+                        <li><a href="#services">News</a></li>
+                        <li><a href="#portfolio">Actives</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul><!-- /.menu-list菜单列表-->
+                </nav><!-- /.menu-list -->
+            </div>
+            <div class="col-sm-5">
+                <div id="searchGroup" class="text-right">
+                    <div id="searchInput">
+                        <input class="form-control" type="text" placeholder="Search" id="searchText">
+                    </div>
+                    <div id="searchIcon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</header><!-- /#main-menu -->
+
+<!--轮播图 bootstrap样式-->
+<section id="bootstrap" class="top">
+    <div class="row">
+        <div class="col-sm-7 carousel-position">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" id="firstImg">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item" id="secondImg">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item" id="thirdImg">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href=" " role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a >
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a >
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="top-news">
+                <div class="top-news-content" id="top-news-firstText"></div>
+                <hr class="top-news-line">
+                <div class="top-news-content" id="top-news-secondText"></div>
+                <hr class="top-news-line">
+                <div class="top-news-content" id="top-news-thirdText"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Today News板块-->
+<div id="services" class="services">
+    <div class="container">
+        <div class="whole-news-line"></div>
+        <div class="service-area">
+            <div class="service-items">
+                <div class="service-top" style="height: 60px; background-color: #209b60">
+                    <div class="row">
+                        <!-- news -->
+                        <div class="col-sm-6">
+                            <div style="height: 15px"></div>
+                            <div class="serviceNews" style="height: 20px">
+                                <h3  style="color: white">News</h3>
+                            </div>
+                            <div style="height: 25px"></div>
+                        </div>
+                    </div><!-- /row -->
+                </div><!-- /.service-top -->
+            </div>
+            <div style="height: 5px"></div>
+            <div class="search-content" >
+                    <div class="left-content">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+                                <div>
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                2017
+                                                <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="201701">Jan</a></li>
+                                                <li><a id="201702">Feb</a></li>
+                                                <li><a id="201703">Mar</a></li>
+                                                <li><a id="201704">Apr</a></li>
+                                                <li><a id="201705">May</a></li>
+                                                <li><a id="201706">Jun</a></li>
+                                                <li><a id="201707">Jul</a></li>
+                                                <li><a id="201708">Aug</a></li>
+                                                <li><a id="201709">Sept</a></li>
+                                                <li><a id="201710">Oct</a></li>
+                                                <li><a id="201711">Nov</a></li>
+                                                <li><a id="201712">Dec</a></li>
+                                            </ul>
+                                        </li><br>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                2018
+                                                <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="201801">Jan</a></li>
+                                                <li><a id="201802">Feb</a></li>
+                                                <li><a id="201803">Mar</a></li>
+                                                <li><a id="201804">Apr</a></li>
+                                                <li><a id="201805">May</a></li>
+                                                <li><a id="201806">Jun</a></li>
+                                                <li><a id="201807">Jul</a></li>
+                                                <li><a id="201808">Aug</a></li>
+                                                <li><a id="201809">Sept</a></li>
+                                                <li><a id="201810">Oct</a></li>
+                                                <li><a id="201811">Nov</a></li>
+                                                <li><a id="201812">Dec</a></li>
+                                            </ul>
+                                        </li><br>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                2019
+                                                <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="201901">Jan</a></li>
+                                                <li><a id="201902">Feb</a></li>
+                                                <li><a id="201903">Mar</a></li>
+                                                <li><a id="201904">Apr</a></li>
+                                                <li><a id="201905">May</a></li>
+                                                <li><a id="201906">Jun</a></li>
+                                                <li><a id="201907">Jul</a></li>
+                                                <li><a id="201908">Aug</a></li>
+                                                <li><a id="201909">Sept</a></li>
+                                                <li><a id="201910">Oct</a></li>
+                                                <li><a id="201911">Nov</a></li>
+                                                <li><a id="201912">Dec</a></li>
+                                            </ul>
+                                        </li><br>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                2020
+                                                <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="202001">Jan</a></li>
+                                                <li><a id="202002">Feb</a></li>
+                                                <li><a id="202003">Mar</a></li>
+                                                <li><a id="202004">Apr</a></li>
+                                                <li><a id="202005">May</a></li>
+                                                <li><a id="202006">Jun</a></li>
+                                                <li><a id="202007">Jul</a></li>
+                                                <li><a id="202008">Aug</a></li>
+                                                <li><a id="202009">Sept</a></li>
+                                                <li><a id="202010">Oct</a></li>
+                                                <li><a id="202011">Nov</a></li>
+                                                <li><a id="202012">Dec</a></li>
+                                            </ul>
+                                        </li><br>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                2021
+                                                <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="202101">Jan</a></li>
+                                                <li><a id="202102">Feb</a></li>
+                                                <li><a id="202103">Mar</a></li>
+                                                <li><a id="202104">Apr</a></li>
+                                                <li><a id="202105">May</a></li>
+                                                <li><a id="202106">Jun</a></li>
+                                                <li><a id="202107">Jul</a></li>
+                                                <li><a id="202108">Aug</a></li>
+                                                <li><a id="202109">Sept</a></li>
+                                                <li><a id="202110">Oct</a></li>
+                                                <li><a id="202111">Nov</a></li>
+                                                <li><a id="202112">Dec</a></li>
+                                            </ul> <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            2022
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a id="202201">Jan</a></li>
+                                            <li><a id="202202">Feb</a></li>
+                                            <li><a id="202203">Mar</a></li>
+                                            <li><a id="202204">Apr</a></li>
+                                            <li><a id="202205">May</a></li>
+                                            <li><a id="202206">Jun</a></li>
+                                            <li><a id="202207">Jul</a></li>
+                                            <li><a id="202208">Aug</a></li>
+                                            <li><a id="202209">Sept</a></li>
+                                            <li><a id="202210">Oct</a></li>
+                                            <li><a id="202211">Nov</a></li>
+                                            <li><a id="202212">Dec</a></li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="right-content">
+                        <!-- 主要的新闻列表-->
+
+                        <div class="main-news" id="main-news">
+                            <ul id="simplecontent">
+                            </ul>
+                            <!--************************分页********************-->
+                            <div id="box" class="text-center">
+                                <div id="pagination">
+                                </div>
+
+
+                            </div>
+                            <!--************************分页********************-->
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.search-content -->
+        </div><!-- /.service-area -->
+    </div><!-- /.container -->
+</div>
+
+<!--  Latest News板块-->
+<section id="portfolio" class="portfolio text-center">
+    <div class="container">
+        <div class="portfolio-area">
+            <div class="portfolio-top">
+                <h2 class="portfolio-title">Our Activities</h2>
+                <p class="title-description">Welcome! These are our interesting activities!</p>
+                <div class="slide-nav-container">
+                    <a class="slide-nav left slide-left post-prev" data-slide="post-prev"><i class="fa fa-angle-left"></i></a>
+                    <a class="slide-nav right slide-right post-next" data-slide="post-next"><i class="fa fa-angle-right"></i></a>
+                </div> <!--翻页箭头标签-->
+            </div><!-- /.portfolio-top Latest News标题部分-->
+            <div id="portfolio-slider" class="portfolio-slider owl-carousel owl-theme">
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/1.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">We Are Family</span>
+                </div><!--Latest News滑页图片和图片描述部分-->
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/2.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Little Boy Coding</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/3.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Aha! Good job!</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/4.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Don't you want to come?</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/5.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Let's Coding</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/6.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Welcome To ThoughtWorks</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/7.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Join us!</span>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <a href="http://www.codingirls.club/">
+                            <img src="../Images/portfolio/8.jpg" alt="Portfolio Image">
+                        </a>
+                    </div>
+                    <span class="item-title">Hello World</span>
+                </div>
+            </div> <!--Latest News滑页部分-->
+        </div><!-- /.portfolio-area Latest News部分-->
+    </div><!-- /.container -->
+</section>
+<footer class="footer" id="footer">
+    <div class="container margin-btm-30">
+        <h3>Contact us</h3>
+        <ul class="list-inline footer-social">
+            <li>
+                <a href="#" title="twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="facebook">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" onMouseOut="hideImg1()"  onmouseover="showImg1()">
+                    <i class="fa fa-qq" aria-hidden="true"></i>
+                </a>
+                <div id="wxImg1" style="display:none;height:50px;back-ground:#f00;position:absolute;">
+                    <img src="../Images/qq.jpg">
+                </div>
+            </li>
+            <li>
+                <a href="#" onMouseOut="hideImg2()"  onmouseover="showImg2()">
+                    <i class="fa fa-weixin" aria-hidden="true"></i>
+                </a>
+                <div id="wxImg2" style="display:none;height:50px;back-ground:#f00;position:absolute;">
+                    <img src="../Images/CodingGirlsClub.jpg">
+                </div>
+            </li>
+            <li>
+                <a href="#" title="weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+        <p>If you have some questions:
+            <a href="#" title="">info@codingirls.club</a>
+        </p>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <span>&copy; Coding Girls Club Copyright 2016 - 2017. All Right Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<div id="scroll-to-top" class="scroll-to-top">
+  <span>
+    <i class="fa fa-chevron-up"></i>
+  </span>
+</div>
+<script src="../JS/modernizr-2.8.3.min.js"></script>
+<script src="../JS/jquery-2.1.0.min.js"></script>
+<script src="../JS/jquery.magnific-popup.min.js"></script>
+<script src="../JS/gmap3.js"></script>
+<script src="../JS/plugins.js"></script>
+<script src="../JS/functions.js"></script>
+<script src="../JS/wow.min.js"></script>
+<script type="text/javascript" src="../JS/jquery.ajaxchimp.min.js"></script>
+<script src="../JS/index.js"></script>
+<script src="../library/jQueryPagination/js/jquery.pagination.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+
+        /* -------- One page Navigation ----------*/
+        $('#main-menu #menu').onePageNav({
+            currentClass: 'active',
+            changeHash: false,
+            scrollSpeed: 1500,
+            scrollThreshold: 0.5,
+            scrollOffset: 95,
+            filter: ':not(.sub-menu a, .not-in-home)',
+            easing: 'swing'
+        });
+
+
+        /*----------- Google Map - with support of gmaps.js ----------------*/
+
+        function isMobile() {
+            return ('ontouchstart' in document.documentElement);
+        }
+
+        function init_gmap() {
+            if ( typeof google == 'undefined' ) return;
+            var options = {
+                center: [-37.817331, 144.955652],
+                zoom: 15,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                },
+                navigationControl: true,
+                scrollwheel: false,
+                streetViewControl: true
+            }
+
+            if (isMobile()) {
+                options.draggable = false;
+            }
+
+            $('#googleMaps').gmap3({
+                map: {
+                    options: options
+                },
+                marker: {
+                    latLng: [-37.817331, 144.955652],
+                    options: { icon: 'images/mapicon.png' }
+                }
+            });
+        }
+
+        init_gmap();
+    });
+</script>
+<script>
+    function  showImg1(){
+        document.getElementById("wxImg1").style.display='block';
+    }
+    function hideImg1(){
+        document.getElementById("wxImg1").style.display='none';
+    }
+    function  showImg2(){
+        document.getElementById("wxImg2").style.display='block';
+    }
+    function hideImg2(){
+        document.getElementById("wxImg2").style.display='none';
+    }
+</script>
+</body>
+</html>

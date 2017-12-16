@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coding Girls Club</title>
+	<meta name="description" content="Heera HTML5 Template by Jewel Theme" >
+	<meta name="author" content="Jewel Theme">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <![endif]-->
+	<!-- Bootstrap  -->
+    <link rel="stylesheet" href="../library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<!-- icon fonts font Awesome -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- Import Animate Styles -->
+	<link href="../CSS/animate.min.css" rel="stylesheet">
+	<!-- Import Custom Responsive Styles -->
+	<link href="../CSS/responsive.css" rel="stylesheet">
+    <link href="../CSS/calendar.css" rel="stylesheet">
+    <link href="../CSS/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="../library/jQueryPagination/css/jquery.pagination.css" />
+    <script src="../JS/jquery-3.2.1.min.js"></script>
+    <script src="../library/jQueryPagination/js/jquery.pagination.min.js"></script>
+</head>
+<body class="header-fixed-top">
+    <!-- 点击Home返回的部分 -->
+    <div id="page-top" class="page-top"></div><!-- /.page-top -->
+    <!--顶部News/Blog图标-->
+    <section id="top-contact" class="top-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 pull-left">
+            <ul class="contact-list">
+              <li class="contact-list-news">
+                <a class="News" href="index">
+                  <span class="top-icon">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i><!--引用图标-->
+                  </span>
+                  <a href="index">News</a>
+                </a>
+              </li>
+              <li class="contact-list-blog">
+                <a class="Blog" href="#">
+                  <span class="top-icon">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                  </span>
+                  <a href="./blog-single">Blog</a>
+                </a>
+              </li>
+            </ul> <!--News,Blog-->
+          </div>
+          <div class="col-sm-4 pull-right"></div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /#top-contact -->
+    <!--顶部CodingGirlsClub图标-->
+    <section id="site-banner" class="site-banner text-center">
+      <div class="container">
+        <div class="site-logo">
+          <p href="./"><img src="../Images/logo.jpg" ></p>
+        </div><!-- /.site-logo -->
+      </div><!-- /.container -->
+    </section><!-- /#site-banner -->
+    <!--导航栏-->
+    <header id="main-menu" class="main-menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <nav id="menu" class="menu collapse navbar-collapse">
+                <ul id="headernavigation" class="menu-list nav navbar-nav">
+                  <li><a href="#main-content" class="active">Latest</a></li>
+                  <li ><a href="#blogs">Blog</a></li>
+                  <li><a href="#footer">Contact</a></li>
+                </ul><!-- /.menu-list -->
+              </nav><!-- /.menu-list -->
+            </div>
+
+            <div class="col-sm-5">
+              <!--***************************dy****************************-->
+                <div id="searchGroup" class="text-right">
+                  <div id="searchInput">
+                    <input class="form-control" type="text" placeholder="Search" id="searchText">
+                  </div>
+                  <div id="searchIcon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </div>
+                </div>
+              <!--***************************dy****************************-->
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </header><!-- /#main-menu -->
+    <!--主blog部分-->
+    <section id="main-content" class="main-content blog-post-singgle-page">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <div id="blog-post-content" class="blog-post-content">
+                <article class="post type-post">
+                  <div class="post-thumbnail">
+                    <img class="img-responsive" src="../Images/blog-single/1.jpg" alt="post Image">
+                  </div><!-- /.post-thumbnail -->
+                </article>
+              </div>
+            </div><!--博客界面图片-->
+            <div class="col-sm-4">
+              <div id="blog-sidebar" class="blog-sidebar widget-area" role="complementary">
+                <div class="sidebar-content">
+
+                  <aside class="widget widget_recent_entries">
+                    <h3 class="widget-title">
+                      Latest Blogs
+                    </h3><!-- /.widget-title -->
+                    <ul class="recent-post" id="recent-post">
+                      <!--<li>
+                        <div class="recent-post-details">
+                          <a class="post-title" href="#" id="post-title1"></a><br>
+                          <div class="post-meta">
+                            <time  ></time>
+                            <a href="#"></a>
+                          </div>&lt;!&ndash; /.post-meta &ndash;&gt;
+                        </div>&lt;!&ndash; /.recent-post-details &ndash;&gt;
+                      </li>
+                      <li>
+                        <div class="recent-post-details">
+                          <a class="post-title" href="#" id="post-title2"></a><br>
+                          <div class="post-meta">
+                            <time  ></time>
+                            <a href="#"></a>
+                          </div>&lt;!&ndash; /.post-meta &ndash;&gt;
+                        </div>&lt;!&ndash; /.recent-post-details &ndash;&gt;
+                      </li>
+                      <li>
+                        <div class="recent-post-details">
+                          <a class="post-title" href="#" id="post-title3"></a><br>
+                          <div class="post-meta">
+                            <time  ></time>
+                            <a href="#"></a>
+                          </div>&lt;!&ndash; /.post-meta &ndash;&gt;
+                        </div>&lt;!&ndash; /.recent-post-details &ndash;&gt;
+                      </li>
+                      <li>
+                        <div class="recent-post-details">
+                          <a class="post-title" href="#" id="post-title4"></a><br>
+                          <div class="post-meta">
+                            <time  ></time>
+                            <a href="#"></a>
+                          </div>&lt;!&ndash; /.post-meta &ndash;&gt;
+                        </div>&lt;!&ndash; /.recent-post-details &ndash;&gt;
+                      </li>
+                      <li>
+                        <div class="recent-post-details">
+                          <a class="post-title" href="#" id="post-title5"></a><br>
+                          <div class="post-meta">
+                            <time  ></time>
+                            <a href="#"></a>
+                          </div>&lt;!&ndash; /.post-meta &ndash;&gt;
+                        </div>&lt;!&ndash; /.recent-post-details &ndash;&gt;
+                      </li>-->
+                    </ul><!-- /.recent-post -->
+                  </aside><!-- /.widget -->
+                </div><!-- /.sidebar-content -->
+              </div><!-- /#sidebar -->
+            </div><!--右侧标签栏-->
+          </div>
+        </div><!--主blog上半部分-->
+      <div id="blogs" class="container">
+        <div class="whole-news-line" style="margin-bottom: 10px; border-bottom: 1px solid #d7dee0"></div>
+        <div class="service-area">
+          <div class="service-items">
+            <div class="service-top">
+              <span>Blog</span>
+            </div><!-- /.service-top -->
+          </div>
+          <div style="height: 5px"></div>
+          <div class="search-content" >
+            <div class="row">
+              <div class="left-content">
+                <nav class="navbar navbar-default" role="navigation">
+                  <div class="container-fluid">
+                    <div>
+                      <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                          <a href=" " class="dropdown-toggle" data-toggle="dropdown">
+                            2017
+                            <b class="caret"></b>
+                          </a >
+                          <ul class="dropdown-menu">
+                            <li><a id="201701">Jan</a></li>
+                            <li><a id="201702">Feb</a></li>
+                            <li><a id="201703">Mar</a></li>
+                            <li><a id="201704">Apr</a></li>
+                            <li><a id="201705">May</a></li>
+                            <li><a id="201706">Jun</a></li>
+                            <li><a id="201707">Jul</a></li>
+                            <li><a id="201708">Aug</a></li>
+                            <li><a id="201709">Sept</a></li>
+                            <li><a id="201710">Oct</a></li>
+                            <li><a id="201711">Nov</a></li>
+                            <li><a id="201712">Dec</a></li>
+                          </ul>
+                        </li><br>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            2018
+                            <b class="caret"></b>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a id="201801">Jan</a></li>
+                            <li><a id="201802">Feb</a></li>
+                            <li><a id="201803">Mar</a></li>
+                            <li><a id="201804">Apr</a></li>
+                            <li><a id="201805">May</a></li>
+                            <li><a id="201806">Jun</a></li>
+                            <li><a id="201807">Jul</a></li>
+                            <li><a id="201808">Aug</a></li>
+                            <li><a id="201809">Sept</a></li>
+                            <li><a id="201810">Oct</a></li>
+                            <li><a id="201811">Nov</a></li>
+                            <li><a id="201812">Dec</a></li>
+                          </ul>
+                        </li><br>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            2019
+                            <b class="caret"></b>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a id="201901">Jan</a></li>
+                            <li><a id="201902">Feb</a></li>
+                            <li><a id="201903">Mar</a></li>
+                            <li><a id="201904">Apr</a></li>
+                            <li><a id="201905">May</a></li>
+                            <li><a id="201906">Jun</a></li>
+                            <li><a id="201907">Jul</a></li>
+                            <li><a id="201908">Aug</a></li>
+                            <li><a id="201909">Sept</a></li>
+                            <li><a id="201910">Oct</a></li>
+                            <li><a id="201911">Nov</a></li>
+                            <li><a id="201912">Dec</a></li>
+                          </ul>
+                        </li><br>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            2020
+                            <b class="caret"></b>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a id="202001">Jan</a></li>
+                            <li><a id="202002">Feb</a></li>
+                            <li><a id="202003">Mar</a></li>
+                            <li><a id="202004">Apr</a></li>
+                            <li><a id="202005">May</a></li>
+                            <li><a id="202006">Jun</a></li>
+                            <li><a id="202007">Jul</a></li>
+                            <li><a id="202008">Aug</a></li>
+                            <li><a id="202009">Sept</a></li>
+                            <li><a id="202010">Oct</a></li>
+                            <li><a id="202011">Nov</a></li>
+                            <li><a id="202012">Dec</a></li>
+                          </ul>
+                        </li><br>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            2021
+                            <b class="caret"></b>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a id="202101">Jan</a></li>
+                            <li><a id="202102">Feb</a></li>
+                            <li><a id="202103">Mar</a></li>
+                            <li><a id="202104">Apr</a></li>
+                            <li><a id="202105">May</a></li>
+                            <li><a id="202106">Jun</a></li>
+                            <li><a id="202107">Jul</a></li>
+                            <li><a id="202108">Aug</a></li>
+                            <li><a id="202109">Sept</a></li>
+                            <li><a id="202110">Oct</a></li>
+                            <li><a id="202111">Nov</a></li>
+                            <li><a id="202112">Dec</a></li>
+                          </ul> <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          2022
+                          <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a id="202201">Jan</a></li>
+                          <li><a id="202202">Feb</a></li>
+                          <li><a id="202203">Mar</a></li>
+                          <li><a id="202204">Apr</a></li>
+                          <li><a id="202205">May</a></li>
+                          <li><a id="202206">Jun</a></li>
+                          <li><a id="202207">Jul</a></li>
+                          <li><a id="202208">Aug</a></li>
+                          <li><a id="202209">Sept</a></li>
+                          <li><a id="202210">Oct</a></li>
+                          <li><a id="202211">Nov</a></li>
+                          <li><a id="202212">Dec</a></li>
+                        </ul>
+                      </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="right-content">
+                <!-- 主要的博客列表-->
+                <div class="main-blog">
+                  <ul id="simplecontent">
+                  </ul>
+                  <!--************************分页********************-->
+                  <div id="box" class="text-center">
+                    <div id="pagination">
+                    </div>
+                  </div>
+                  <!--************************分页********************-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.container -->
+    </section><!-- /#main-content -->
+    <!--Contact us板块-->
+    <footer class="footer" id="footer">
+      <div class="container margin-btm-30">
+        <h3>Contact us</h3>
+        <ul class="list-inline footer-social">
+          <li>
+            <a href="#" title="twitter">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="facebook">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" onMouseOut="hideImg1()"  onmouseover="showImg1()">
+              <i class="fa fa-qq" aria-hidden="true"></i>
+            </a>
+            <div id="wxImg1" style="display:none;height:50px;back-ground:#f00;position:absolute;">
+              <img src="../Images/qq.jpg">
+            </div>
+          </li>
+          <li>
+            <a href="#" onMouseOut="hideImg2()"  onmouseover="showImg2()">
+              <i class="fa fa-weixin" aria-hidden="true"></i>
+            </a>
+            <div id="wxImg2" style="display:none;height:50px;back-ground:#f00;position:absolute;">
+              <img src="../Images/CodingGirlsClub.jpg">
+            </div>
+          </li>
+          <li>
+            <a href="#" title="weibo">
+              <i class="fa fa-weibo" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        <p>If you have some questions:
+          <a href="#">info@codingirls.club</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>&copy; Coding Girls Club Copyright 2016 - 2017. All Right Reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!--滑到顶部-->
+    <div id="scroll-to-top" class="scroll-to-top">
+      <span>
+        <i class="fa fa-chevron-up"></i>
+      </span>
+    </div><!-- /#scroll-to-top -->
+
+    <!-- Include modernizr-2.8.3.min.js -->
+    <script src="../JS/modernizr-2.8.3.min.js"></script>
+    <!-- Include jquery.min.js plugin -->
+
+    <!-- Javascript Plugins  -->
+    <script src="../JS/plugins.js"></script>
+    <!-- Custom Functions  -->
+    <script src="../JS/functions.js"></script>
+    <script src="../JS/wow.min.js"></script>
+    <script src="../JS/blog.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            /* -------- One page Navigation ----------*/
+            $('#main-menu #menu').onePageNav({
+                currentClass: 'active',
+                changeHash: false,
+                scrollSpeed: 1500,
+                scrollThreshold: 0.5,
+                scrollOffset: 95,
+                filter: ':not(.sub-menu a, .not-in-home)',
+                easing: 'swing'
+            });
+
+
+            /*----------- Google Map - with support of gmaps.js ----------------*/
+
+            function isMobile() {
+                return ('ontouchstart' in document.documentElement);
+            }
+
+            function init_gmap() {
+                if ( typeof google == 'undefined' ) return;
+                var options = {
+                    center: [-37.817331, 144.955652],
+                    zoom: 15,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                    },
+                    navigationControl: true,
+                    scrollwheel: false,
+                    streetViewControl: true
+                };
+
+                if (isMobile()) {
+                    options.draggable = false;
+                }
+
+                $('#googleMaps').gmap3({
+                    map: {
+                        options: options
+                    },
+                    marker: {
+                        latLng: [-37.817331, 144.955652],
+                        options: { icon: 'images/mapicon.png' }
+                    }
+                });
+            }
+
+            init_gmap();
+        });
+    </script>
+    <script>
+        function  showImg1(){
+            document.getElementById("wxImg1").style.display='block';
+        }
+        function hideImg1(){
+            document.getElementById("wxImg1").style.display='none';
+        }
+        function  showImg2(){
+            document.getElementById("wxImg2").style.display='block';
+        }
+        function hideImg2(){
+            document.getElementById("wxImg2").style.display='none';
+        }
+    </script>
+ </body>
+</html>
